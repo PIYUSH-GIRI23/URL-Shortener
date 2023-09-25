@@ -2,7 +2,8 @@ const text = document.body.querySelector('#search');
 const b = document.body.querySelector('.submit');
 const c = document.body.querySelector('.clear');
 const d = document.body.querySelector('.warning');
-const url = 'http://localhost:80/api/link/create';
+// const url = 'http://localhost:80/api/link/create';
+const url = 'vercel.com/piyushs-projects/url-shortener/api/link/create';
 
 c.addEventListener('click', () => {
     text.value = '';
@@ -30,7 +31,8 @@ b.addEventListener('click', async () => {
         const answer=responseJson.shortenedLink;
         
         const linkElement = document.createElement('a');
-        linkElement.href = 'http://localhost/api/link/visit/'+answer;
+        // linkElement.href = 'http://localhost/api/link/visit/'+answer;
+        linkElement.href = 'vercel.com/piyushs-projects/url-shortener/api/link/visit/'+answer;
         linkElement.textContent=`here`
         
 
